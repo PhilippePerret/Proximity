@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Proximity</title>
+    <link rel="stylesheet" href="css/app/checker.css" id="stylesheet_app_checker" />
+<link rel="stylesheet" href="css/app/mot.css" id="stylesheet_app_mot" />
+<link rel="stylesheet" href="css/app/page.css" id="stylesheet_app_page" />
+<link rel="stylesheet" href="css/app/paragraph.css" id="stylesheet_app_paragraph" />
+<link rel="stylesheet" href="css/app/pReport.css" id="stylesheet_app_pReport" />
+<link rel="stylesheet" href="css/app/ProxToolBox.css" id="stylesheet_app_ProxToolBox" />
+<link rel="stylesheet" href="css/app/ui_app.css" id="stylesheet_app_ui_app" />
+<link rel="stylesheet" href="css/system/Cancelisation.css" id="stylesheet_system_Cancelisation" />
+<link rel="stylesheet" href="css/system/common.css" id="stylesheet_system_common" />
+<link rel="stylesheet" href="css/system/Dialog.css" id="stylesheet_system_Dialog" />
+<link rel="stylesheet" href="css/system/DMenus.css" id="stylesheet_system_DMenus" />
+<link rel="stylesheet" href="css/system/Flash.css" id="stylesheet_system_Flash" />
+<link rel="stylesheet" href="css/system/form.css" id="stylesheet_system_form" />
+<link rel="stylesheet" href="css/system/MessageBox.css" id="stylesheet_system_MessageBox" />
+<link rel="stylesheet" href="css/system/MiniAide.css" id="stylesheet_system_MiniAide" />
+<link rel="stylesheet" href="css/system/PConfig.css" id="stylesheet_system_PConfig" />
+<link rel="stylesheet" href="css/system/report.css" id="stylesheet_system_report" />
+<link rel="stylesheet" href="css/system/ui.css" id="stylesheet_system_ui" />
+    <script type="text/javascript">const TESTS=null;</script>
+  </head>
+  <body>
+
+    <section id="header" class="noDisplay">
+    </section>
+
+    <section id="left-page" class="section-page">
+      <div id="container-left-page" class="container-page">
+      </div>
+      <div id="footer-left-page" class="footer-page">
+      </div>
+    </section>
+
+    <section id="gutter">
+      <!-- Boite de contrôleur -->
+      <div id="control-buttons">
+
+      </div>
+    </section>
+
+    <section id="right-column">
+    </section>
+
+    <!-- Un panneau caché pour les infos -->
+    <section id="section-infos_texte" class="panel noDisplay">
+      <div id="infos_texte" class="container-data"></div>
+    </section>
+    <section id="section-infos_proximites" class="panel noDisplay">
+      <div id="infos_proximites" class="container-data"></div>
+    </section>
+
+    <section id="footer">
+      <span id="message">---</span>
+
+      <span id="footer-page-length">
+        <span id="text-length">---</span><span> signes</span>
+      </span>
+
+    </section>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/_constants_proximities_.js"></script>
+    <script type="text/javascript" src="js/first-required/__requires.js" id="stylesheet_first-required_requires"></script>
+<script type="text/javascript" src="js/first-required/app/_constantes_programmation.js" id="stylesheet_first-required_app_constantes_programmation"></script>
+<script type="text/javascript" src="js/first-required/app/App.js" id="stylesheet_first-required_app_App"></script>
+<script type="text/javascript" src="js/first-required/app/constants.js" id="stylesheet_first-required_app_constants"></script>
+<script type="text/javascript" src="js/first-required/app/PConfig.js" id="stylesheet_first-required_app_PConfig"></script>
+<script type="text/javascript" src="js/first-required/app/PReport.js" id="stylesheet_first-required_app_PReport"></script>
+<script type="text/javascript" src="js/first-required/app/PTextElement.js" id="stylesheet_first-required_app_PTextElement"></script>
+<script type="text/javascript" src="js/first-required/app/TextAnalyze.js" id="stylesheet_first-required_app_TextAnalyze"></script>
+<script type="text/javascript" src="js/first-required/app/TextUtils.js" id="stylesheet_first-required_app_TextUtils"></script>
+<script type="text/javascript" src="js/first-required/system/Benchmark.js" id="stylesheet_first-required_system_Benchmark"></script>
+<script type="text/javascript" src="js/first-required/system/Busy.js" id="stylesheet_first-required_system_Busy"></script>
+<script type="text/javascript" src="js/first-required/system/Cancelisation.js" id="stylesheet_first-required_system_Cancelisation"></script>
+<script type="text/javascript" src="js/first-required/system/COLORS.js" id="stylesheet_first-required_system_COLORS"></script>
+<script type="text/javascript" src="js/first-required/system/constants.js" id="stylesheet_first-required_system_constants"></script>
+<script type="text/javascript" src="js/first-required/system/Debug.js" id="stylesheet_first-required_system_Debug"></script>
+<script type="text/javascript" src="js/first-required/system/Dialog.js" id="stylesheet_first-required_system_Dialog"></script>
+<script type="text/javascript" src="js/first-required/system/DMenu.js" id="stylesheet_first-required_system_DMenu"></script>
+<script type="text/javascript" src="js/first-required/system/Dom_utils.js" id="stylesheet_first-required_system_Dom_utils"></script>
+<script type="text/javascript" src="js/first-required/system/Flash.js" id="stylesheet_first-required_system_Flash"></script>
+<script type="text/javascript" src="js/first-required/system/FormModule.js" id="stylesheet_first-required_system_FormModule"></script>
+<script type="text/javascript" src="js/first-required/system/handies_date.js" id="stylesheet_first-required_system_handies_date"></script>
+<script type="text/javascript" src="js/first-required/system/handies.js" id="stylesheet_first-required_system_handies"></script>
+<script type="text/javascript" src="js/first-required/system/IO.js" id="stylesheet_first-required_system_IO"></script>
+<script type="text/javascript" src="js/first-required/system/jquery.js" id="stylesheet_first-required_system_jquery"></script>
+<script type="text/javascript" src="js/first-required/system/Locales.js" id="stylesheet_first-required_system_Locales"></script>
+<script type="text/javascript" src="js/first-required/system/Log.js" id="stylesheet_first-required_system_Log"></script>
+<script type="text/javascript" src="js/first-required/system/Math.js" id="stylesheet_first-required_system_Math"></script>
+<script type="text/javascript" src="js/first-required/system/MessageBox.js" id="stylesheet_first-required_system_MessageBox"></script>
+<script type="text/javascript" src="js/first-required/system/MiniAide.js" id="stylesheet_first-required_system_MiniAide"></script>
+<script type="text/javascript" src="js/first-required/system/PConfig.js" id="stylesheet_first-required_system_PConfig"></script>
+<script type="text/javascript" src="js/first-required/system/Preferences.js" id="stylesheet_first-required_system_Preferences"></script>
+<script type="text/javascript" src="js/first-required/system/Report.js" id="stylesheet_first-required_system_Report"></script>
+<script type="text/javascript" src="js/first-required/system/String.js" id="stylesheet_first-required_system_String"></script>
+<script type="text/javascript" src="js/first-required/system/Text.js" id="stylesheet_first-required_system_Text"></script>
+<script type="text/javascript" src="js/first-required/system/UI.js" id="stylesheet_first-required_system_UI"></script>
+<script type="text/javascript" src="js/first-required/system/UIObject.js" id="stylesheet_first-required_system_UIObject"></script>
+<script type="text/javascript" src="js/first-required/system/utils.js" id="stylesheet_first-required_system_utils"></script>
+<script type="text/javascript" src="js/then-required/app/app_prefs.js" id="stylesheet_then-required_app_app_prefs"></script>
+<script type="text/javascript" src="js/then-required/app/PCanon.js" id="stylesheet_then-required_app_PCanon"></script>
+<script type="text/javascript" src="js/then-required/app/PFile.js" id="stylesheet_then-required_app_PFile"></script>
+<script type="text/javascript" src="js/then-required/app/PMot.js" id="stylesheet_then-required_app_PMot"></script>
+<script type="text/javascript" src="js/then-required/app/PParagraph.js" id="stylesheet_then-required_app_PParagraph"></script>
+<script type="text/javascript" src="js/then-required/app/Proximity.js" id="stylesheet_then-required_app_Proximity"></script>
+<script type="text/javascript" src="js/then-required/app/ProxToolBox.js" id="stylesheet_then-required_app_ProxToolBox"></script>
+<script type="text/javascript" src="js/then-required/app/PTexte.js" id="stylesheet_then-required_app_PTexte"></script>
+<script type="text/javascript" src="js/then-required/app/UI_app.js" id="stylesheet_then-required_app_UI_app"></script>
+
+  </body>
+</html>

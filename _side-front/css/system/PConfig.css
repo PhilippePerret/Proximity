@@ -1,0 +1,64 @@
+div#configurations {
+  position:fixed;
+  top:0px;
+  left:40px;
+  padding-top:1em;
+  z-index:400;
+  /* width:840px; */
+  font-size:12.3pt;
+  background-color:white;
+  box-shadow:10px 13px 25px #CCC;
+}
+
+/*
+  Le conteneur des lignes
+ */
+div#configurations div#config-lines {
+  padding:0;
+}
+
+div#configurations button.btn-help {
+  all:unset;
+}
+
+/*
+  Les lignes pour chaque configuration
+ */
+div#configurations div.config-line {
+  width:580px;
+  border-bottom:1px solid #CCC;
+  text-align:right;
+  line-height:1.5em;
+  padding:0 1em;
+}
+
+div#configurations div.config-line > label,
+div#configurations div.config-line > span,
+div#configurations div.config-line > input[type="text"] {
+  display:inline-block;
+}
+div#configurations div.config-line > label {
+  float:left;
+}
+div#configurations div.config-line > input[type="text"] {
+  border:1px solid #EFEFEF;
+  text-align:right;
+}
+div#configurations div.config-line > select > option {
+  font-size:10.5pt;
+}
+/*
+  Les boutons
+*/
+div#configurations div.buttons {
+  text-align:right;
+  margin-top:1em;
+  padding:1em;
+}
+div#configurations div.buttons button {
+
+}
+div#configurations div.buttons button#btn-config-save {
+  font-size: 1.4em;
+  margin-left: 2em;
+}

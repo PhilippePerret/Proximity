@@ -1,0 +1,34 @@
+.section-page .container-page {
+  margin:0 2.7em;
+  /* font-size:16.1pt; dépendra de la taille de la fenêtre */
+  font-family:Optima;
+}
+.section-page .container-page .page {
+  text-align:justify;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+/*
+  Pour le pied de page sous chaque page
+  C'est là par exemple qu'on trouve le numéro de page
+ */
+.section-page .footer-page {
+  padding:0 1em;
+}
+#left-page .footer-page {
+  text-align:left;
+}
+#right-page .footer-page {
+  text-align:right;
+}
+
+.section-page .footer-page button {
+  opacity:0.5;
+  font-size:0.9em;
+  vertical-align:sub;
+  margin-left:1em;
+  margin-right:1em;
+}
+.section-page .footer-page button:hover {
+  opacity:1;
+}

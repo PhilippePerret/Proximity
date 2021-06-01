@@ -1,0 +1,99 @@
+app:
+  word:
+    analyse:    Analyse
+    ignore:     Ignore
+    unignore:   Un-Ignore
+  locution:
+    analyse:
+      again: "Analyze again…"
+    canon:
+      ignore:
+        all:  Ignore All
+        les:  "Ignore the ${nombre}"
+      unignore:
+        all:  Un-ignore the canon
+    proximity:
+      update: "Update proximities"
+    report:
+      display:  "Display the report"
+    word:
+      delete:  "Suppress the word"
+
+ptexte:
+  alert:
+    texte-required: "A current text is required. Use menu item 'Proximity ›› Open…'."
+  error:
+    data:
+      invalid: "INVALID DATA. Data integrity is corrupted and I've not been able to fix them (errors: %{count}, fixed: %{fixed})"
+    save:
+      unabled: "Unable to save data (errors can't be fixed)."
+  analyse:
+    confirm-force:  "Do you really want to reset the analysis of this text?\nAll the modifications (proximities saved, ignored, modified, etc.) will be lost forever.\n\nDo you really want to proceed??"
+    checker:
+      menu: "Check data…"
+  message:
+    offset:
+      no-offset-rectified:
+        long: "Any offset has changed. I can stop now."
+        flash: 'No offset changes.'
+  offsets:
+    clean: "All offsets (page, paragraphs and words) are clean."
+    reparer:
+      menu: "Repare offsets…"
+      ask-for-repare: "${nombre} bad offsets found.\n\nShall I repare them?"
+    update:
+      menu: "Update offsets (and proximities)"
+  update-offsets:
+    error:
+      word-already-traited: "Word #${id} '${real}' already traited => infinite loop."
+      paragraph-already-traited: "Paragraph #${id} already traited => infinite loop."
+      page-already-traited: "Page #${num} already traited => infinite loop."
+pmot:
+  create:
+    error:
+      data-required: "[IMPLEMENTATION] Data are required to create a new word."
+      after:
+        required: "[IMPLEMENTATION] the before word is required, to create the new word [PMot]."
+        must-be-pmot-instance: "[IMPLEMENTATION] The before word (after) must be a PMot instance, to create a new word [PMot]."
+  replace:
+    confirm-when-new-prox: "This replacement will create a proximity with the word '${motProx}' at ${distance} characters.\n\nDo you really want to proceed?"
+  insert:
+    error:
+      invalid-new-word: "The first argument to insert a new word must be a [Object]."
+      bad-insertion: "Bad insertion : ${raison}. Analysis must be fixed… (Analysis ›› Fix…)"
+      first-mot-bad-next: "next word of word before is wrong"
+      inserted-bad-next: "next word of inserted word is wrong"
+      next-mot-bad-prev: "previous word of word after is wrong"
+      inserted-bad-prev: "previous word of inserted word is wrong"
+
+  ask:
+    replace:
+      title:    "Word Replacement"
+      question: "With which word do you want to replace the word “${mot}”?"
+
+canon:
+  update:
+    error:
+      start-index-exceed-max: "Start index (${istart}) can't be greater or equal to last index of canon (${last})."
+  ignore:
+    confirmation: "All the words of this canon will be ignored. ${annuler}"
+  unignore:
+    confirmation: "All the words of this canon are again considered."
+  ask:
+    ignore: "Do I really ignore all the words of the canon “${canon}”?"
+
+proximity:
+  error:
+    mots:
+      undefined: "[Proximity#calcDistance] motA and motB of prox ${id} should be defined…"
+      motA:
+        not-defined: "motA not defined"
+      motB:
+        not-defined: "motB not defined"
+      should-have-been-removed: "Item should have proximities any more (they should have been removed while removing the canon)."
+    update:
+      mot-required: "A first word is required, to update proximities"
+
+report:
+  offsets:
+    titre: "Offsets and ownerships"

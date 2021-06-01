@@ -1,0 +1,50 @@
+# Attention : si une clé est utilisée dans le fichier de l'application,
+# il écrasera la clé ici. C'est la raison pour laquelle il vaut mieux
+# commencer le fichier application par app:
+word:
+  cancel:     Cancel
+  configuration:  Configuration
+  copy:       Copy
+  cut:        Cut
+  editing:    Edit
+  fix:        Fix
+  no:         No
+  ok:         OK
+  OK:         OK
+  paste:      Paste
+  yes:        Yes
+  redo:       Redo
+  reload:     Reload
+  Renounce:   Renounce
+  renounce:   Renounce
+  replace:    "Replace…"
+  save:       Save
+  text:       Text
+  tools:      Tools
+
+locution:
+  app:
+    reload: 'Reload App'
+  open: 'Open…'
+  tests:
+    run: 'Run tests…'
+  web-console:  'Web Console'
+error:
+  # Dialog windows
+  dialog:
+    message:
+      unfound: "[IMPLEMENTATION] Unfound locale '${locale}'."
+    confirm:
+      options:
+        required: "[IMPLEMENTATION] Options are required for 'confirm' function. As a return method or as a hash of definition."
+  # DMenu
+  dmenu:
+    observer:
+      required: "[IMPLEMENTATION] 'observer' property is required, for DMenu"
+    text:
+      required: "[IMPLEMENTATION] 'text' property is required, for DMenu"
+    id:
+      required: "[IMPLEMENTATION] 'id' property is required, for DMenu"
+    owner:
+      required: "[IMPLEMENTATION] the owner is required, for a DMenu"
+      should-respond-to: "[IMPLEMENTATION] The owner should respond to event observer '${observer}'"

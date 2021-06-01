@@ -1,0 +1,97 @@
+app:
+  word:
+    analyse:    Analyse
+    ignore:     Ignorer
+    unignore:   Reconsidérer
+  locution:
+    analyse:
+      again: "Analyser à nouveau…"
+    canon:
+      ignore:
+        all:  Ignorer tous
+        les:  "Ignorer les ${nombre}"
+      unignore:
+        all:  Reconsidérer le canon
+    proximity:
+      update: "Actualiser les proximités"
+    report:
+      display:  "Afficher le rapport"
+    word:
+      delete:  "Supprimer le mot"
+
+ptexte:
+  alert:
+    texte-required: "Un texte courant est requis. Utiliser le menu 'Ouvrir…'."
+  error:
+    data:
+      invalid: "DONNÉES INVALIDES et je n'ai pas pu réparer les erreurs  (erreurs: %{count}, corrigée: %{fixed})"
+    save:
+      unabled: "Impossible de sauver les données (elles n'ont pas pu être réparées)"
+  analyse:
+    confirm-force:  "Es-tu vraiment certain de vouloir recommencer toute l'analyse de ce texte ?\nConcrètement, toutes les modifications (enregistrement des proximités ignorées, remplacement de mots, etc.) seront définitivement perdues.\n\nDois-je vraiment procéder à la destruction de toutes ces modifications ?"
+    checker:
+      menu: "Checker les données…"
+  update-offsets:
+    error:
+      word-already-traited: "Le mot #${id} '${real}' a déjà été traité => boucle infinie."
+      paragraph-already-traited: "Le paragraphe #${id} a déjà été traité => boucle infinie."
+      page-already-traited: "La page #${num} a déjà été traitée => boucle infinie."
+  message:
+    offset:
+      no-offset-rectified:
+        long: "Aucun offset de mot n'a changé, je peux m'arrêter là."
+        flash: "Aucun changement d'offset."
+  offsets:
+    clean: "Tous les offsets de ce texte (page, paragraphes et mots) sont justes."
+    reparer:
+      menu: "Réparer les offsets…"
+      ask-for-repare: "${nombre} offsets erronés ont été trouvés.\n\nDois-je les réparer ?"
+    update:
+      menu: "Actualiser les offsets (et les proximités)"
+pmot:
+  create:
+    error:
+      data-required: "[IMPLEMENTATION] les +data+ Data sont requises pour créer un nouveau mot."
+      after:
+        required: "[IMPLEMENTATION] Le mot avant est requis pour créer le nouveau mot PMot"
+        must-be-pmot-instance: "[IMPLEMENTATION] Le mot avant (after) doit être une instance de PMot, pour créer le nouveau mot PMot"
+  replace:
+    confirm-when-new-prox: "Ce remplacement va créer une proximité avec le mot '${motProx}' situé à ${distance} caractères.\n\nDois-je procéder quand même au remplacement ?"
+  insert:
+    error:
+      invalid-new-word: "Le premier argument pour l'insertion d'un mot doit être soit une table [Object] contenant les données du mot."
+      bad-insertion: "Le mot a été mal inséré : ${raison}. L'analyse doit être réparée pour ne pas entrainer d'autres problèmes graves… (Analyse ›› Réparer…)"
+      first-mot-bad-next: "le mot suivant du premier mot est mal affecté"
+      inserted-bad-next: "le mot suivant du mot inséré  est mal affecté"
+      next-mot-bad-prev: "le mot précédent du mot suivant est mal affecté"
+      inserted-bad-prev: "le mot précédent du mot inséré est mal affecté"
+  ask:
+    replace:
+      title:    "Remplacement de mot"
+      question: "Par quoi remplacer le mot “${mot}” ?"
+
+canon:
+  update:
+    error:
+      start-index-exceed-max: "L'index de départ (${istart}) ne peut pas être supérieur ou égal au dernier index de mot possible dans le canon (${last})."
+  ignore:
+    confirmation: "Tous les mots de ce canons sont ignorés. ${annuler}"
+  unignore:
+    confirmation: "Tous les mots de ce canon sont à nouveau considérés."
+  ask:
+    ignore: "Dois-je vraiment ignorer tous les mots de canon “${canon}” ?"
+
+proximity:
+  error:
+    mots:
+      undefined: "[Proximity#calcDistance] motA et motB de Proximity #${id} sont indéfinis…"
+      motA:
+        not-defined: "motA n'est pas défini"
+      motB:
+        not-defined: "motB n'est pas défini"
+      should-have-been-removed: "L'item ne devrait plus avoir de proximités… (elles auraient dû être supprimées avec le 'remove' du canon)"
+    update:
+      mot-required: "Pour actualiser les proximités, un premier mot est requis (le texte ne semble pas en contenir…)."
+report:
+  offsets:
+    titre: "Offsets et appartenances"

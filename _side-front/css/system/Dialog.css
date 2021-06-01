@@ -1,0 +1,72 @@
+
+ /* ---------------------------------------------------------------------
+  Les dialogues
+
+  */
+.dialog {
+  position: fixed;
+  left: 30%;
+  top: 15%;
+  min-width: 200px;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: auto auto 50px;
+  grid-template-rows: auto auto auto auto;
+  z-index: 1000;
+  background-color: #EEEEEE;
+  font-family: Arial, Helvetica;
+  box-shadow: 2px 2px 23px #585757;
+}
+.dialog, .dialog * {
+  -webkit-user-select:none;
+}
+.dialog div.title {
+  grid-column: 1/4;
+  grid-row:1;
+  background-color: #555555;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, Geneva;
+  padding: 4px 18px;
+}
+
+.dialog img.icon {
+  grid-column: 1;
+  grid-row: 2;
+  width: 70px;
+  padding: 10px;
+}
+
+.dialog div.message {
+  grid-column: 2/4;
+  grid-row: 2;
+  padding: 2em;
+  /* border: 1px dashed green; */
+}
+.dialog input[type="text"] {
+  /* display: block;
+  width: 94%; */
+  grid-column: 1/4;
+  grid-row:3;
+  margin: 2px 1em;
+  font-family:inherit;
+  font-size:inherit;
+}
+
+.dialog div.buttons {
+  grid-column: 2/4;
+  grid-row: 4;
+  text-align: right;
+  padding: 1em 1.5em;
+}
+.dialog div.buttons button {
+  font-family:Optima, Arial, Helvetica;
+  font-size: inherit;
+  min-width: 60px;
+  margin-left:1em;
+  cursor:pointer;
+}
+.dialog div.buttons button.main {
+  background-color:#1bb91b!important;
+  color:white!important;
+}

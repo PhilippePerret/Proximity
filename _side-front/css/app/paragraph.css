@@ -1,0 +1,12 @@
+/*
+  Les paragraphes
+*/
+
+div.paragraph {
+  font-size:16.1pt;
+  text-indent: 1em;
+  line-height:1.8em;
+  text-align:justify;
+  text-indent:0.8em;
+  margin-bottom:0.5em;
+}

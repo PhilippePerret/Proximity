@@ -1,0 +1,97 @@
+---
+config:
+  force_update: true
+  auto_save: false
+  debug: false
+mots:
+  expose: true
+  nombre: 3
+  items:
+    - id: 1
+      real: "Hello"
+      offset: 0
+    - id: 2
+      real: "le"
+      canon: "le"
+      offset: 6
+    - id: 3
+      real: "world"
+      canon: "world"
+      offset: 9
+      tbw: ' !'
+canons:
+  expose: true
+  nombre: 3
+  items:
+    - id: 1
+      canon: "hello"
+    - id: 2
+      canon: "le"
+    - id: 3
+      canon: "world"
+proximites:
+  nombre: 0
+operations:
+  - id: remplacer_mot1
+    titre: "Remplacement du premier et du dernier mot"
+    debug: true
+    actions:
+      - ['test', ['A', 1, true]]
+      - ['replaceMotWith', [1, 'Bonjour']]
+      - ['waitForNotBusy']
+      - ['replaceMotWith', [3, 'monde']]
+      - ['waitForNotBusy']
+    before:
+      mots:
+        expose: true
+        items:
+          - id: 1
+            real: 'Hello'
+    after:
+      canons:
+        null_items: [1, 3]
+        items:
+          - id: 4
+            canon: 'bonjour'
+          - id: 5
+            canon: 'monde'
+      mots:
+        expose: true
+        nombre: 3
+        items:
+          - id: 1
+            real: 'Bonjour'
+            offset: 0
+          - id: 2
+            real: 'le'
+            offset: 8
+          - id: 3
+            real: 'monde'
+            offset: 11
+  - id: remplacer_un_mot_par_deux
+    titre: "Remplacement d'un mot pour deux"
+    before:
+      mots:
+        nombre: 3
+    actions:
+      - [replaceMotWith, [2, 'tout le']]
+      - ['waitForNotBusy']
+    after:
+      mots:
+        expose: true
+        nombre: 4
+        null_items: [2]
+        items:
+          - id: 4
+            real: 'tout'
+            canon: 'tout'
+          - id: 5
+            real: 'le'
+            canon: 'le'
+      canons:
+        expose: true
+        nombre: 4
+        null_item: [1, 2, 3]
+        items:
+          - id: 6
+            canon: 'tout'

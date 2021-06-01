@@ -1,0 +1,29 @@
+/*
+  Pour le container principal du mot
+*/
+span.cmo {
+  position:relative;
+}
+
+.mot.exergue {
+  background:unset!important;
+  background-color:black!important;
+  color:white!important;
+}
+
+
+.infosbulle {
+  position:fixed;
+  color:white;
+  font-family: Arial;
+  font-size:9.9pt;
+  padding:4px 8px;
+  border-radius:8px;
+  z-index:1000;
+}
+.infosbulle:not(.hot){
+  background-color:black;
+}
+.infosbulle.hot {
+  background-color:red;
+}

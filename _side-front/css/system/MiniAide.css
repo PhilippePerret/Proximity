@@ -1,0 +1,19 @@
+div#mini-aide {
+  position:fixed;
+  z-index:1000;
+  background-color:#60ece2;
+  padding:1em;
+  max-width: 300px;
+  font-size:12.3pt;
+  border-radius:0.8em;
+}
+
+div#mini-aide #mini-aide-title {
+  font-weight:bold;
+  margin-bottom:1em;
+}
+
+div#mini-aide #mini-aide-content {
+  max-height:200px;
+  overflow:auto;
+}

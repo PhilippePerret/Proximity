@@ -1,0 +1,107 @@
+---
+config:
+  force_update: true
+  auto_save: false
+  debug: false
+mots:
+  expose: true
+  nombre: 7
+  items:
+    - id: 1
+      real: Le
+      canon: le
+      offset: 0
+    - id: 2
+      real: texte
+      px_idN: 1 # <- ici la proximité
+      offset: 3
+    - id: 3
+      real: est
+      canon: être
+      offset: 9
+    - id: 4
+      real: un
+      canon: un
+      offset: 13
+    - id: 5
+      real: texte
+      px_idP: 1 # <= ici proximité
+      offset: 16
+    - id: 6
+      real: sans
+      offset: 22
+      canon: sans
+    - id: 7
+      real: souci
+      offset: 27
+      canon: souci
+proximity:
+  expose: true
+  nombre: 1
+  items:
+    - id: 1
+      motA_id: 2
+      motB_id: 5
+      distance: 9
+operations:
+  - id: remplacement_mot_avec_suppression_proximity
+    titre: "Remplacement d'un mot d'une proximité sans nouvelle proximité"
+    actions:
+      - ['clickOn_mot_withMeta', 2]
+      - ['fill_replaceField_with', 'camembert']
+      - ['clickOn_okButton_of_ProxToolsBox']
+      - ['waitForNotBusy']
+    before:
+      canons:
+        nombre: 6
+      mots:
+        items:
+          - id: 3
+            offset: 9
+    after:
+      mots:
+        nombre: 7
+        items:
+          - id: 1
+            offset: 0
+          - id: 2
+            offset: 3
+            px_idN: null
+          - id: 3
+            offset: 13
+          - id: 4
+            offset: 17
+          - id: 5
+            offset: 20
+            px_idP: null
+          - id: 6
+            offset: 26
+          - id: 7
+            offset: 31
+      proximity:
+        nombre: 0
+      canons:
+        nombre: 7
+        items:
+          - id: 7
+            canon: camembert
+
+  - id: remplacement_mot_avec_nouvelle_proximity
+    titre: "Remplacement d'un mot avec génération d'une nouvelle proximité"
+    actions:
+      - ['clickOn_mot_withMeta', 2]
+      - ['fill_replaceField_with', 'souci']
+      - ['clickOn_okButton_of_ProxToolsBox']
+    after:
+      mots:
+        nombre: 7
+        items:
+          - id: 2
+            real: souci
+      proximity:
+        nombre: 1
+        null_items: [1]
+        items:
+          - id: 2
+            motA_id: 2
+            motB_id: 7

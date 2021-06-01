@@ -1,0 +1,72 @@
+.preport {
+  background-color:white;
+  font-family:inherit;
+  font-size:inherit;
+  width:840px;
+  height:auto;
+  border-radius:1em;
+  padding:1em;
+  box-shadow:10px 5px 20px grey;
+  /* position:absolute;
+  left:2em;
+  top:1em; */
+  /* max-height:600px; */
+  overflow:auto;
+  z-index:500;
+}
+
+.preport .preport-header {
+  margin-bottom:1em;
+  font-size:1.4em;
+}
+
+.preport span.pre {
+  white-space: pre;
+  font-family:monospace;
+  margin:0;
+}
+
+.preport .retractable-title {
+  font-variant: small-caps;
+  font-size:1.2em;
+}
+.preport .retractable-picto {
+  display:inline-block;
+  width:30px;
+}
+.preport .retractable-titre-buttons {
+  float:right;
+  font-size:11.2pt;
+}
+.preport .retractable-titre-buttons:before {
+  content:'• ';
+}
+.preport .retractable-titre-buttons span {
+  /* margin-left: 8px; */
+}
+.preport .retractable-titre-buttons span:before {
+  content:' ';
+}
+.preport .retractable-titre-buttons span:after {
+  content: ' •'
+}
+
+.preport .retractable-contents {
+  margin-left:2em;
+}
+
+.preport div.report-line {
+  clear:both;
+}
+.preport div.report-line:after {
+  content:' ';
+  height:inherit;
+}
+.preport div.report-line > label {
+  display:inline-block;
+  width:240px;
+}
+.preport div.report-line > span.value {
+  display:innline-block;
+  width: 300px;
+}

@@ -1,0 +1,116 @@
+body {
+  display: grid;
+  grid-template-columns: 720px 4% auto;
+  grid-template-rows: auto 100px;
+  width: 100%;
+  min-height:814px;
+  /* border: 1px dashed red; */
+  margin:0;
+  padding:0;
+  font-size:14.6pt;
+  font-family:Avenir;
+}
+
+
+body > section#footer {
+  grid-column: 1/3;
+  grid-row:2;
+  position: fixed;
+  bottom:0; left:0;
+  width:calc(100% - 16px);
+  /* width:100%; */
+  padding:2px 8px;
+  background-color:#EEEEEE;
+  border-top:1px solid #BBBBBB;
+  text-align:right;
+  z-index: 100;
+}
+body > section#footer span#message {
+  display: inline-block;
+  width:400px;
+  font-size:11.1pt;
+  background-color: black;
+  color:white;
+  text-align:left;
+  margin-left:2em;
+  padding:1px 8px 2px;
+}
+body > section#footer span#message.warning {
+  color:#ff8484;
+}
+body > section#footer span#message.notice {
+  color:#4adaff;
+}
+body > section#footer span#message.green {
+  color:#24d424;
+}
+
+section#footer button#btn-search {
+  width: 90px;
+}
+
+body > section#left-page,
+body > section#gutter,
+body > section#right-page
+{
+  /* border: 1px dashed green; */
+  grid-row:1;
+  width: 100%;
+  position:relative;
+  z-index:1;
+  /* border:1px solid #CCCCCC; */
+}
+
+body > section#left-page,
+body > section#right-page
+{
+  /* border: 1px dashed green; */
+  /* max-height:500px; */
+  /* max-height:750px; */
+  /* overflow-y: scroll; */
+}
+
+body > section#left-page {
+  grid-column: 1;
+  /* border-right: 1px solid black; */
+}
+body > section#gutter {
+  grid-column:2;
+  z-index:-1;
+}
+body > section#right-page {
+  grid-column: 3;
+  z-index:0 !important;
+}
+
+body > div#aide {
+  position: fixed;
+  top:0;left:0;
+  padding:2em;
+  z-index: 100;
+  background-color:white;
+  box-shadow: 10px 10px 10px;
+  font-family:'Avenir Next';
+  width: 540px;
+  max-height: 300px;
+  overflow: auto;
+}
+body > div#aide a.btn-close {
+  cursor:pointer;
+  font-family:Arial;
+}
+
+div#waiter {
+  position:fixed;
+  top:200px;
+  left:calc(50% - 150px);
+  width:300px;
+  padding:2em;
+  text-align:center;
+  background-color:white;
+  opacity:0.75;
+  font-family:Arial,Helvetica;
+  font-size:15.7pt;
+  z-index:3000;
+}
+div#waiter img {width:40%;}

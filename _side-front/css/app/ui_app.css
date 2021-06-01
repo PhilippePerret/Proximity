@@ -1,0 +1,14 @@
+/* Le span contenant les boutons pour passer de page en page */
+div#control-buttons {
+  position:absolute;
+  bottom:10px;
+  background-color:white;
+  text-align:center;
+  color:#777777;
+  opacity:0.5;
+  z-index:100;
+}
+div#control-buttons:hover {opacity:1;}
+section#footer span#footer-page-length {
+  float:left;
+}

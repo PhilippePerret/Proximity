@@ -1,0 +1,29 @@
+
+.proxtoolbox {
+  position:absolute;
+  top:10px;
+  left:40px;
+  width:180px;
+  font-size: 11pt;
+  background-color:green;
+  box-shadow:5px 5px 5px 5px #AAAAAA;
+  padding:0.2em 1em;
+  line-height:1.9em;
+  padding-bottom:2em;
+  z-index:1000;
+}
+.proxtoolbox div.menu {
+  /* margin:11px 0; */
+  color:white;
+  cursor:pointer;
+}
+.proxtoolbox div.menu:hover {
+  background-color: #2979dc !important;
+}
+.proxtoolbox div.menu-fermer {
+  text-align:right;
+}
+.proxtoolbox div.menu-fermer span {
+  font-size:1.8em;
+  cursor:pointer;
+}

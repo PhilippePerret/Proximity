@@ -1,0 +1,15 @@
+/*
+  Pour le checker de données
+*/
+
+div.pchecker {
+  position:relative;
+  width: 680px;
+}
+
+div.pchecker pre.output {
+  min-height: 400px;
+  max-height: 600px;
+  overflow:auto;
+  font-size: 10.2pt;
+}

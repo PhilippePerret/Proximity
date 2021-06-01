@@ -1,0 +1,37 @@
+
+div#flash {
+  position:fixed;
+  bottom:28px;
+  right: 4px;
+  z-index:1000;
+  text-align:left;
+  background-color:wheat;
+  z-index:5000;
+  opacity:1;
+  font-size:13pt;
+  font-family:Arial,Helvetica;
+}
+div#flash > div {
+  padding:8px 24px;
+  position:relative;
+}
+div#flash > div.neutre {
+  background-color:black;
+  color:white;
+}
+div#flash > div.notice {
+  background-color:#1D2986;
+  color:white;
+}
+div#flash > div.warning {
+  background-color:#E81212;
+  color:white;
+}
+div#flash > div img.waiter {
+  position:absolute;
+  left: -20px;
+}
+div#flash.vanish {
+  opacity:0;
+  transition:1s
+}

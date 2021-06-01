@@ -1,0 +1,31 @@
+#report {
+  background-color:white;
+  font-family:monospace;
+  font-size:12pt;
+  width:600px;
+  height:auto;
+  border-radius:1em;
+  padding:1em;
+  box-shadow:10px 5px 20px grey;
+  position:absolute;
+  left:2em;
+  top:1em;
+  max-height:600px;
+  overflow:auto;
+  z-index:500;
+}
+#report div.report-line {
+  clear:both;
+}
+#report div.report-line:after {
+  content:' ';
+  height:inherit;
+}
+#report div.report-line > label {
+  display:inline-block;
+  width:240px;
+}
+#report div.report-line > span.value {
+  display:innline-block;
+  width: 300px;
+}
